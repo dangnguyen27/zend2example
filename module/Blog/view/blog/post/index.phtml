@@ -1,0 +1,10 @@
+<a href="/post/new">New Post</a>
+<?php if ($posts): ?>
+	<?php foreach($posts as $post): ?>
+		<h1><a href="/post/view/<?php echo $post->getId() ?>"><?php echo $post->getTitle(); ?></a></h1>
+		<p><?php echo $post->getContent(); ?></p>
+		<a href="/post/edit/<?php echo $post->getId() ?>">Edit</a> | <a href="/post/delete/<?php echo $post->getId() ?>">Delete</a>
+	<?php endforeach; ?>
+<?php else: ?>
+	<h1>No data</h1>
+<?php endif; ?>

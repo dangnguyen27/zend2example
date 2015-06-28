@@ -1,0 +1,10 @@
+<?php 
+$form = $this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo $this->formRow($form->get('title'));
+echo '<br>';
+echo $this->formRow($form->get('content'));
+echo $this->formInput($form->get('submit'));
+echo $this->form()->closeTag($form);
